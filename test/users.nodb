@@ -1,0 +1,1 @@
+{"primary":{"columnName":"primary","lastVal":198528,"symTo":"id"},"id":{"columnName":"id","columnType":"autoinc"},"username":{"columnName":"username","columnType":"varchar"},"email":{"columnName":"email","columnType":"varchar"},"password":{"columnName":"password","columnType":"text"}}
