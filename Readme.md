@@ -41,7 +41,6 @@
             padding: 9px;
         }
     </style>
-
 </head>
 <body>
     <div class="container">
