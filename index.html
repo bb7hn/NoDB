@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap" rel="stylesheet">
     <!-- import google fonts -->
-    <link rel="stylesheet" href="https://batuhanozen.com/css/reset.css">
+    <link rel="stylesheet" href="./reset.css">
     <style>
         html,body{
             font-family: 'Fira Code', monospace;
@@ -101,15 +101,7 @@
                 </td>
             </tr>
         </table>
-        <script>
-            const faviconTag = document.getElementById("faviconTag");
-            const isDark = window.matchMedia("(prefers-color-scheme: dark)");
-            const changeFavicon = () => {
-                if (isDark.matches) faviconTag.href = "./img/NoDB-Dark.png";
-                else faviconTag.href = "./img/NoDB-Light.png"; 
-            };
-            changeFavicon();
-        </script>
+        <script src="./index.js"></script>
     </div>
 </body>
 </html>
