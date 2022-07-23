@@ -45,7 +45,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="user-select:none;display:flex;align-items:center;font-size:4.8em"><img class="logo" src="./img/NoDB-Light.png" alt="NoDB Logo">DB</h1>
+        <h1 style="user-select:none;display:flex;align-items:center;font-size:4.8em"><img id="logo" class="logo" src="./img/NoDB-Light.png" alt="NoDB Logo">DB</h1>
         <h1 class="title">Definition</h1>
         <hr/>
         <table>
@@ -101,15 +101,7 @@
                 </td>
             </tr>
         </table>
-        <script>
-            const faviconTag = document.getElementById("faviconTag");
-            const isDark = window.matchMedia("(prefers-color-scheme: dark)");
-            const changeFavicon = () => {
-                if (isDark.matches) faviconTag.href = "./img/NoDB-Dark.png";
-                else faviconTag.href = "./img/NoDB-Light.png"; 
-            };
-            changeFavicon();
-        </script>
     </div>
+    <script src="./readme.js"></script>
 </body>
 </html>
