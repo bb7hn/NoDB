@@ -1,7 +1,0 @@
-RewriteEngine On 
-Options +FollowSymLinks
-RewriteRule ^favicon.ico img/NoDB-Dark.png [L]
-#Order Allow,Deny
-#<FilesMatch "(^index\.html$)|(^test\.php$)||(^favicon\.ico$)">
-#Allow from all
-#</FilesMatch>
