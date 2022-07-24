@@ -55,5 +55,4 @@
             </td>
         </tr>
     </table>
-    <script src="./index.js"></script>
 </div>
