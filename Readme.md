@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 style="user-select:none;display:flex;align-items:center;font-size:4.8em"><img class="logo" src="./img/NoDB-Light.png" alt="NoDB Logo">DB</h1>
+    <h1 style="user-select:none;display:flex;align-items:center;font-size:4.8em">NoDB</h1>
     <h1 class="title">Definition</h1>
     <hr/>
     <table>
