@@ -8,9 +8,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Commit to Notion
-        uses: bb7hn/notionCommitter@main
-        secrets:
-          GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB }}
-          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
+      - run : node /notion_committer/index.js
