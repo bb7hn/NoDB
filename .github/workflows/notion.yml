@@ -8,5 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run : ls
+      - run: cd/notion_committer/ 
+      - run: ls
       #- run : node /notion_committer/index.js
