@@ -6,8 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: BATUHAN
     steps:
-      - run: cd/notion_committer/ 
-      - run: ls
+      - run: dir 
       #- run : node /notion_committer/index.js
