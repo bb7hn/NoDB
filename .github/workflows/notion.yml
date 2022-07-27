@@ -8,7 +8,11 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - uses: actions/notion_committer@main
+      - uses: bb7hn/notionCommitter@main
+        env: # Or as an environment variable
+          SECRET_GITHUB  : ${{ secrets.SECRET_GITHUB }}
+          NOTION_API_KEY  : ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE : ${{ secrets.NOTION_DATABASE }}
     #steps:
     #  - uses: actions/checkout@v3
     #  - name: Use Node.js ${{ matrix.node-version }}
