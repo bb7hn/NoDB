@@ -4,7 +4,11 @@ on:
 
 jobs:
   build:
-    runs-on: BATUHAN
+    runs-on: ubuntu-latest
     steps:
       - name: Commit to Notion
-        uses: bb7hn/notionCommiter@main
+        uses: bb7hn/notionCommitter@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
