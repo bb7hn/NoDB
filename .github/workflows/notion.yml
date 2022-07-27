@@ -7,4 +7,4 @@ jobs:
     runs-on: BATUHAN
     steps:
       - name: Commit to Notion
-        uses: bb7hn/notionCommiter
+        uses: bb7hn/notionCommiter@main
