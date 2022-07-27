@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Commit to Notion
         uses: bb7hn/notionCommitter@main
-        secrets:
+        with:
           GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
