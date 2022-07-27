@@ -7,11 +7,8 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    script:
-      - node index.js
-      artifacts:
-        paths:
-          -/notion_committer/
+    steps:
+      - uses: actions/notion_committer@main
     #steps:
     #  - uses: actions/checkout@v3
     #  - name: Use Node.js ${{ matrix.node-version }}
