@@ -7,13 +7,18 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci --location=global
-      - run: npm run build --if-present --location=global
-      - run: npm test --location=global
+    script:
+      - node index.js
+      artifacts:
+        paths:
+          -/notion_committer/
+    #steps:
+    #  - uses: actions/checkout@v3
+    #  - name: Use Node.js ${{ matrix.node-version }}
+    #    uses: actions/setup-node@v3
+    #    with:
+    #      node-version: ${{ matrix.node-version }}
+    #      cache: 'npm'
+    #  - run: npm ci --location=global
+    #  - run: npm run build --if-present --location=global
+    #  - run: npm test --location=global
