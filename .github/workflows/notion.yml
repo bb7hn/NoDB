@@ -9,10 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: bb7hn/notionCommitter@main
-        env: # Or as an environment variable
+        with:
           SECRET_GITHUB  : ${{ secrets.SECRET_GITHUB }}
           NOTION_API_KEY  : ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE : ${{ secrets.NOTION_DATABASE }}
+          OWNER : bb7hn
+          REPO  : NoDB
     #steps:
     #  - uses: actions/checkout@v3
     #  - name: Use Node.js ${{ matrix.node-version }}
