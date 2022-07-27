@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: BATUHAN
+    runs-on: self-hosted
     steps:
       - run: dir 
       #- run : node /notion_committer/index.js
