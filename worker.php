@@ -16,13 +16,24 @@ $worker->onConnect = function($connection){
     }; */
     $connection->onMessage = function($connection, $d){
         echo "\n\n";
-        global $validMethods;
         $data = json_decode($d);
         if(isset($data->method) && isset($data->data)){
-            $connection->send('received successfully.');
+            
                 switch ($data->method) {
                     case 'create':
-                        echo "new create request";
+                        if(isset($data->data->fields) && $data->data->name){
+                            $tableName  = $data->data->name;
+                            $fields     = $data->data->fields;
+                            echo "new create request\n";
+                            require_once('NoDb/nodb.class.php');
+                            $db         = new NoDb();
+                            $response   = $db->createTable($tableName,$fields);
+                            $connection->send("$response");
+                            break;
+                        }
+                        $response = "Invalid request";
+                        echo $response.'\n';
+                        $connection->send("$response");
                         break;
                     case 'insert':
                         echo "new insert request";
@@ -38,6 +49,7 @@ $worker->onConnect = function($connection){
                         $connection->send('invalid request!');
                         break;
                 }
+                
         }
         else{
             $connection->send('invalid request!');

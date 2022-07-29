@@ -1,0 +1,13 @@
+2022-07-29 17:58:53 pid:1 Worker process terminated
+2022-07-29 18:02:09 pid:1 Worker process terminated
+2022-07-29 18:07:16 pid:1 Error: Object of class stdClass could not be converted to string in C:\wamp64\www\NoDB\Worker.php:71
+Stack trace:
+#0 C:\wamp64\www\NoDB\Worker.php(26): create(Object(stdClass))
+#1 C:\wamp64\www\NoDB\vendor\workerman\workerman\Connection\TcpConnection.php(638): {closure}(Object(Workerman\Connection\TcpConnection), '{"method":"crea...')
+#2 C:\wamp64\www\NoDB\vendor\workerman\workerman\Events\Select.php(295): Workerman\Connection\TcpConnection->baseRead(Resource id #20)
+#3 C:\wamp64\www\NoDB\vendor\workerman\workerman\Worker.php(2447): Workerman\Events\Select->loop()
+#4 C:\wamp64\www\NoDB\vendor\workerman\workerman\Worker.php(1442): Workerman\Worker->run()
+#5 C:\wamp64\www\NoDB\vendor\workerman\workerman\Worker.php(1385): Workerman\Worker::forkWorkersForWindows()
+#6 C:\wamp64\www\NoDB\vendor\workerman\workerman\Worker.php(550): Workerman\Worker::forkWorkers()
+#7 C:\wamp64\www\NoDB\Worker.php(64): Workerman\Worker::runAll()
+#8 {main}

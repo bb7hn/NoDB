@@ -10,11 +10,18 @@
     <script>
         ws = new WebSocket("ws://127.0.0.3:3000");
         ws.onopen = function() {
-            console.log("connected successfully");
             let data = {
                 method:'create',
                 data: {
-                    test:'test'
+                    name:'test',
+                    fields:{
+                        id          : 'auto_increment',
+                        name        : 'varchar',
+                        lastName    : 'varchar',
+                        userName    : 'varchar',
+                        password    : 'text',
+                        status      : 'bool'
+                    }
                 }
             };
             ws.send(JSON.stringify(data));
